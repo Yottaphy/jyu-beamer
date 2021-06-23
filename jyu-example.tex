@@ -1,0 +1,38 @@
+\documentclass{beamer}
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{styles/jyumacros}
+\usefolder{styles}
+\usetheme{jyu}
+\titlegraphic{assets/coverlogo.pdf}
+\newcommand{\smalllogo}{assets/small_white.pdf}
+
+\title{The Title}
+\date{\today}
+\author[auth]{Author McAuthor}
+\institute[inst]{Jedi Council}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}
+    \tableofcontents    
+\end{frame}
+\section{Section 1 Example}
+\subsection{Subsection eg.}
+\begin{frame}{Frame 1}
+    \begin{itemize}
+        \item \textbf{Item}
+        \item Other Item \cite{article}
+        \item Something else \cite{inbook}
+    \end{itemize}
+\end{frame}
+\subsection{Subsection2 eg.}
+\section{Refs}
+\begin{frame}[allowframebreaks]{References}
+    \bibliography{demo}
+    \bibliographystyle{elsarticle-num}
+  
+  \end{frame}
+\end{document}

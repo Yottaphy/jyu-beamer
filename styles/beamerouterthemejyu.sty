@@ -1,0 +1,59 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{jyu}[1][left]
+{
+  \tikz[remember picture,overlay]{
+    \node(b)[anchor=north west]{\hspace{2em}\usebeamerfont{header title} \insertframetitle};
+    \draw[line width=4em, jyublue](b.west)--+(1,0)
+		node[midway] {\includegraphics[scale=0.12]{\smalllogo}};
+ }
+}
+
+%Title Page
+\defbeamertemplate*{title page}{jyu}[1][]{
+	\begin{tikzpicture}[remember picture,overlay]
+      	\node (back names) [shape=rectangle, 
+		fill=jyublue, fill opacity=0, text opacity=1, 
+		minimum height=1\textheight, minimum width=0.8\textwidth, 
+		anchor=north] at (current page.north) {
+      	  		\begin{minipage}{\textwidth}
+					\vspace*{-0.3em}
+					\begin{center}\includegraphics[scale=0.2]{\inserttitlegraphic}\end{center}
+					\vspace*{0.3em}
+					\usebeamerfont{title}\begin{center}\usebeamercolor*[fg]{title}\inserttitle\end{center}
+					\vspace*{0.3em}
+					\usebeamerfont{author}\begin{center}\usebeamercolor*[fg]{author}\insertauthor\end{center} \par
+					\usebeamerfont{institute}\begin{center}\usebeamercolor*[fg]{institute}\insertinstitute\end{center} \par
+					\usebeamerfont{date}\begin{center}\usebeamercolor*[fg]{date}\insertdate\end{center} \par
+					\inserttitlegraphic
+				\end{minipage}
+		};
+	\end{tikzpicture}
+}
+
+\let\oldmaketitle\maketitle
+\renewcommand{\maketitle}[1]{
+	{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{#1}}\oldmaketitle{}}
+}
+
+% Footer
+\setbeamertemplate{footline}{%
+\ifnum\theframenumber=1%
+	
+\else
+	\begin{beamercolorbox}[wd=\textwidth, leftskip=0.3cm,rightskip=0.3cm, ht=0.5cm,dp=0.15cm]{white}%
+		\usebeamerfont{footnote}\usebeamercolor*[fg]{footer}\insertdate\hfill
+		% Uncomment to display navigation button
+		%\insertslidenavigationsymbol%
+		%\insertframenavigationsymbol%
+		%\insertsubsectionnavigationsymbol%
+		%\insertsectionnavigationsymbol%
+		%\insertdocnavigationsymbol%
+		%\insertbackfindforwardnavigationsymbol%	
+		\hfill \insertauthor\hspace*{3em}\insertframenumber%
+	\end{beamercolorbox}%
+	\fi%
+}
+
+\mode<all>
