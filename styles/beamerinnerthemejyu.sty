@@ -3,11 +3,11 @@
 \setbeamertemplate{background}{
   \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-  \fill[color=jyublue] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-  \fill[color=jyuorange] (0,0) rectangle(\the\paperwidth,0.5);
+  \fill[color=primary] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=secondary] (0,0) rectangle(\the\paperwidth,0.5);
   \ifnum\thepage>1\relax%
    \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-   \fill[color=jyublue] (0,0) rectangle(\the\paperwidth,0.5);
+   \fill[color=primary] (0,0) rectangle(\the\paperwidth,0.5);
    \fi
   \end{tikzpicture}
 }
@@ -15,7 +15,7 @@
 % Table of Content
 \tikzset{section number/.style={
     circle,  
-    fill=jyuorange,  
+    fill=secondary,  
     minimum size=0.2em,
     text=white,
     inner sep=1.5pt,
@@ -26,12 +26,12 @@
     minimum height=1em,
     minimum width=0.8\textwidth,
     text width=0.8\textwidth,
-    text=jyublue,
+    text=primary,
     align=left
   },
   subsection number/.style={
     draw=none,  
-    text=jyuorange,
+    text=secondary,
     inner sep=1pt,
     minimum size=0.15cm,
   },
@@ -41,7 +41,7 @@
     minimum height=1em,
     minimum width=0.8\textwidth,
     text width=0.8\textwidth,
-    text=jyublue,
+    text=primary,
     align=left
   }
 }
@@ -58,7 +58,7 @@
 }
 
 \setbeamertemplate{section in toc shaded}{
-  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number, fill=jyuorange, text=white]{\usebeamerfont*{toc subtitle}\textbf{\inserttocsectionnumber}};
+  \hspace*{0.4cm}\tikz[baseline=-0.5ex]\node[section number, fill=secondary, text=white]{\usebeamerfont*{toc subtitle}\textbf{\inserttocsectionnumber}};
   \ \tikz[baseline=-0.5ex]\node[section, text=white]{\usebeamerfont*{toc title} \inserttocsection};\\[-0.3cm]
   \hspace*{1.3cm}{\usebeamercolor*[fg]{footer} \rule{0.6\paperwidth}{0.2pt}\\\nointerlineskip}
 }

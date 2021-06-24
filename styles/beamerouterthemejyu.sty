@@ -5,7 +5,7 @@
 {
   \tikz[remember picture,overlay]{
     \node(b)[anchor=north west]{\hspace{2em}\usebeamerfont{header title} \insertframetitle};
-    \draw[line width=4em, jyublue](b.west)--+(1,0)
+    \draw[line width=4em, primary](b.west)--+(1,0)
 		node[midway] {\includegraphics[scale=0.12]{\smalllogo}};
  }
 }
@@ -14,7 +14,7 @@
 \defbeamertemplate*{title page}{jyu}[1][]{
 	\begin{tikzpicture}[remember picture,overlay]
       	\node (back names) [shape=rectangle, 
-		fill=jyuorange, fill opacity=0, text opacity=1, 
+		fill=secondary, fill opacity=0, text opacity=1, 
 		minimum height=1\textheight, minimum width=0.8\textwidth, 
 		anchor=north] at (current page.north) {
       	  		\begin{minipage}{\textwidth}
@@ -41,18 +41,18 @@
 \defbeamertemplate*{section cover}{jyu}[1][]{
 	\begin{tikzpicture}[remember picture,overlay]
       	\node (back names) [shape=rectangle, 
-		fill=jyuorange, fill opacity=1, text opacity=0, 
+		fill=secondary, fill opacity=1, text opacity=0, 
 		minimum height=1\paperheight, minimum width=\paperwidth, 
 		anchor=center] at (current page.center) {a};
 		\node (back names) [shape=rectangle, 
-		fill=jyuorange, fill opacity=0, text opacity=1, 
+		fill=secondary, fill opacity=0, text opacity=1, 
 		minimum height=0.05\paperheight, minimum width=0.5\paperwidth, 
 		anchor=north] at (current page.center) {\begin{minipage}{\textwidth}
 			\vspace*{3em}					
 			\usebeamerfont{title}\begin{center}\usebeamercolor*[fg]{title}\secname\end{center}
 		\end{minipage}};
 		% \node[shape=rectangle, fill=white, fill opacity=1] (c) at (current page.north) 
-		\node[shape=circle, fill=jyublue, fill opacity=0, text=white, text opacity=1, anchor=south] (number) at (current page.center){\usebeamerfont{number}\thesection};
+		\node[shape=circle, fill=primary, fill opacity=0, text=white, text opacity=1, anchor=south] (number) at (current page.center){\usebeamerfont{number}\thesection};
 	\end{tikzpicture}
 }
 
