@@ -1,6 +1,6 @@
 \mode<presentation>
 
-% Frame title
+% Frame title (upper bit with small rectangle and logo)
 \defbeamertemplate*{frametitle}{jyu}[1][left]
 {
   \tikz[remember picture,overlay]{
@@ -10,7 +10,7 @@
  }
 }
 
-%Title Page
+%Title Page 
 \defbeamertemplate*{title page}{jyu}[1][]{
 	\begin{tikzpicture}[remember picture,overlay]
       	\node (back names) [shape=rectangle, 
@@ -37,7 +37,7 @@
 	{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight]{#1}}\oldmaketitle{}}
 }
 
-%Section Title Page
+%Section Title Page (a big rectangle that basically covers the footer)
 \defbeamertemplate*{section cover}{jyu}[1][]{
 	\begin{tikzpicture}[remember picture,overlay]
       	\node (back names) [shape=rectangle, 
@@ -61,7 +61,9 @@
     \usebeamertemplate*{section cover}
 	\newpage	
 }
-% Footer
+
+
+% Footer Text (in all except the title page)
 \setbeamertemplate{footline}{%
 \ifnum\theframenumber=1%
 	
