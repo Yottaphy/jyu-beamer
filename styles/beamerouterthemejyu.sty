@@ -18,15 +18,15 @@
 		minimum height=1\textheight, minimum width=0.8\textwidth, 
 		anchor=north] at (current page.north) {
       	  		\begin{minipage}{\textwidth}
-					\vspace*{0.1em}
+					\vspace*{-0.3em}
 					\begin{center}\includegraphics[scale=0.2]{\inserttitlegraphic}\end{center}
-					\vspace*{0.2em}
-					\usebeamerfont{title}\begin{center}\usebeamercolor*[fg]{title}\inserttitle\end{center} \par
-					\usebeamerfont{subtitle}\begin{center}\usebeamercolor*[fg]{title}\insertsubtitle\end{center}
+					\vspace*{0.3em}
+					\usebeamerfont{title}\begin{center}\usebeamercolor*[fg]{title}\inserttitle\end{center}
 					\vspace*{0.3em}
 					\usebeamerfont{author}\begin{center}\usebeamercolor*[fg]{author}\insertauthor\end{center} \par
 					\usebeamerfont{institute}\begin{center}\usebeamercolor*[fg]{institute}\insertinstitute\end{center} \par
 					\usebeamerfont{date}\begin{center}\usebeamercolor*[fg]{date}\insertdate\end{center} \par
+					\inserttitlegraphic
 				\end{minipage}
 		};
 	\end{tikzpicture}
