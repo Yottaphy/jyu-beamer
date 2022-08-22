@@ -1,11 +1,12 @@
 \mode<presentation>
 
 % Frame title (upper bit with small rectangle and logo)
-\defbeamertemplate*{frametitle}{jyu}[1][left]
+\defbeamertemplate*{frametitle}{jyu}[1][]
 {
   \tikz[remember picture,overlay]{
-    \node(b)[anchor=north west]{\hspace{2em}\usebeamerfont{header title} \insertframetitle};
-    \draw[line width=4em, primary](b.west)--+(1,0)
+    \node(a)[anchor=north west]{\hspace*{2em}\usebeamerfont{header title} \color{white}{Ap}}; %Makes the rectangle cover ascenders and descenders.
+    \node(b)[anchor=north west]{\hspace*{2em}\usebeamerfont{header title} \insertframetitle};
+    \draw[line width=4em, primary](a.west)--+(1,0)
 		node[midway] {\includegraphics[scale=0.12]{\smalllogo}};
  }
 }
@@ -18,15 +19,14 @@
 		minimum height=1\textheight, minimum width=0.8\textwidth, 
 		anchor=north] at (current page.north) {
       	  		\begin{minipage}{\textwidth}
-					\vspace*{-0.3em}
-					\begin{center}\includegraphics[scale=0.2]{\inserttitlegraphic}\end{center}
-					\vspace*{0.3em}
+					\vspace*{0.1em}
+					\begin{center}\includegraphics[scale=0.2]{\liverpoollogo}\hspace*{1.5cm} \includegraphics[scale=0.2]{\inserttitlegraphic}\end{center}
+					\vspace*{0.2em}
 					\usebeamerfont{title}\begin{center}\usebeamercolor*[fg]{title}\inserttitle\end{center}
 					\vspace*{0.3em}
 					\usebeamerfont{author}\begin{center}\usebeamercolor*[fg]{author}\insertauthor\end{center} \par
 					\usebeamerfont{institute}\begin{center}\usebeamercolor*[fg]{institute}\insertinstitute\end{center} \par
 					\usebeamerfont{date}\begin{center}\usebeamercolor*[fg]{date}\insertdate\end{center} \par
-					\inserttitlegraphic
 				\end{minipage}
 		};
 	\end{tikzpicture}
