@@ -4,7 +4,7 @@
 \defbeamertemplate*{frametitle}{jyu}[1][]
 {
   \tikz[remember picture,overlay]{
-    \node(a)[anchor=north west]{\hspace*{2em}\usebeamerfont{header title} \color{white}{Ap}}; %Makes the rectangle cover ascenders and descenders.
+    \node(a)[anchor=north west]{\hspace*{2em}\usebeamerfont{header title} \color{back}{Ap}}; %Makes the rectangle cover ascenders and descenders.
     \node(b)[anchor=north west]{\hspace*{2em}\usebeamerfont{header title} \insertframetitle};
     \draw[line width=4em, primary](a.west)--+(1,0)
 		node[midway] {\includegraphics[scale=0.12]{\smalllogo}};
